@@ -1,0 +1,14 @@
+version: '2.0'
+stories:
+    - story: calcular_imc
+      steps:
+          - intent: calculate_imc
+          - action: utter_ask_weight
+          - intent: inform_weight
+            entities:
+                - weight: '70'
+          - action: utter_ask_height
+          - intent: inform_height
+            entities:
+                - height: '1.75'
+          - action: action_calculate_imc

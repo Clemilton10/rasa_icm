@@ -1,0 +1,21 @@
+version: '2.0'
+nlu:
+    - intent: inform_weight
+      examples: |
+          - Meu peso é [70](weight) kg
+          - Eu peso [80](weight) kg
+          - [90](weight) kg
+
+    - intent: inform_height
+      examples: |
+          - Minha altura é [1.75](height) metros
+          - Eu tenho [1.80](height) metros
+          - [1.65](height) m
+
+    - intent: calculate_imc
+      examples: |
+          - oi
+          - olá
+          - Qual é o meu IMC?
+          - Pode calcular o meu IMC?
+          - Quero saber meu IMC

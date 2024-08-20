@@ -1,0 +1,33 @@
+intents:
+    - inform_weight
+    - inform_height
+    - calculate_imc
+
+entities:
+    - weight
+    - height
+
+slots:
+    weight:
+        type: text
+        mappings:
+            - type: from_entity
+              entity: weight
+    height:
+        type: text
+        mappings:
+            - type: from_entity
+              entity: height
+
+responses:
+    utter_ask_weight:
+        - text: 'Qual é o seu peso em kg?'
+
+    utter_ask_height:
+        - text: 'Qual é a sua altura em metros?'
+
+    utter_thanks:
+        - text: 'Obrigado! Calculando seu IMC...'
+
+actions:
+    - action_calculate_imc
